@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="/public/css/button.css">
+  <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css"> 
+  {{block 'head'}}{{/block}}
+  <title>{{block 'title'}}默认标题{{/block}}</title>
+</head>
+
+<body>
+  <!-- Begin Body -->
+  <div class="container">
+      <div class="row">
+  {{include '../_partials/adminLeft.html'}}
+  {{block 'middle'}}{{/block}} 
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="/public/js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <script src="/public/js/bootstrap.min.js"></script>
+  <script src="/public/js/cookie.js"></script>
+  <script src="/public/js/main.js"></script>
+{{block 'script'}}{{/block}}
+</body>
+
+</html>

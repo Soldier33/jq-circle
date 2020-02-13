@@ -1,0 +1,28 @@
+<div class="col-md-3">
+    <div class="mt-4">
+        <h3>昵称：</h3>
+        <h3 id="user" class="ml-4"></h3>
+    </div>
+    <div class="mt-4">
+        <h3>当前圈：</h3>
+        <h3 id="userCircle" class="ml-4"></h3>
+    </div>
+    <div class="search_input mb-4">
+        <i class="fa fa-search" id="i-advanced-search-i"></i>
+        <input type="text" id="i-advanced-search" placeholder="搜索">
+    </div>
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+            <h5 class="card-title">我的圈</h5>
+        </div>
+        <div class="card-body my-font my-circle">
+            {{each data}}
+            <div>
+                <span class="now-circle">{{ $value.cname }}</span>
+                <a href='#'><i id="{{ $value.cname }}" class="fa fa-share pull-right mt-2" aria-hidden="true"></i></a>
+                <a href='/user/deleteUserCircle?circle={{ $value.cname }}'><i class="fa fa-trash pull-right mt-2" aria-hidden="true"></i></a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

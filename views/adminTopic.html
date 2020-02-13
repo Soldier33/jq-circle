@@ -1,0 +1,70 @@
+{{extend './_layouts/adminBase.html'}}
+
+{{block 'title'}}{{'AdminTopic/Circle'}}{{/block}}
+
+{{block 'middle'}}
+<div class="col-md-10 my-border">
+    <!--头部-->
+    <div class="mt-4">
+        <h3>
+            <strong>话题</strong>
+            <button type="button" class="btn btn-primary ml-5" data-toggle="modal" data-target="#myModal">制造话题</button>
+        </h3>
+        <hr />
+    </div>
+    <!--内容-->
+    <div class="topic">
+        <div class="my-nav2">
+            <ul>
+                <li><a href=""><strong>圈名</strong></a></li>
+                <li><a href=""><strong>话题</strong></a></li>
+            </ul>
+        </div>
+        {{each data}}
+        <div class="my-nav2">
+            <ul>
+                <li><a href="/admin/circle"><strong>{{ $value.circle }}</strong></a></li>
+                <li>
+                    <a href="/admin/topic/content?topic={{$value.topic}}&circle={{$value.circle}}"><strong>{{ $value.topic }}</strong></a>
+                    <a href="/admin/topic/delete?topic={{$value.topic}} &circle={{$value.circle}}"><i class="fa fa-trash pull-right mt-2" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        {{/each}}
+    </div>
+</div>
+<!-- 模态框 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">制造话题</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">圈:</label>
+                    <input type="text" class="form-control" id="circle">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">话题:</label>
+                    <input type="text" class="form-control" id="topic">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="sub">提交</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{/block}}
+
+{{block 'script'}}
+<script src="/public/js/adminTopic.js"></script>
+{{/block}}

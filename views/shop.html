@@ -1,0 +1,45 @@
+{{extend './_layouts/base.html'}}
+
+{{block 'title'}}{{'Shop/Circle'}}{{/block}}
+
+{{block 'middle'}}
+<div class="col-md-7 my-border">
+    <!--头部-->
+    <div class="mt-4">
+        <h3><strong>商家</strong></h3>
+        <hr />
+    </div>
+    <p>我们只允许提供差评，多次恶意差评将有可能注销您的账号</p>
+    <hr />
+    <!--内容-->
+    <div class="topic">
+        <div class="row">
+            <div class="col-md-1">
+                <img src="/public/img/authlogo.jpg" class="rounded-circle img-mini">
+            </div>
+
+            <div class="col-md-11">
+                <div class="my-name">
+                    &nbsp;&nbsp;&nbsp;
+                    <span><strong>名字</strong></span>
+                </div>
+                <div class="topic-content">
+                    &nbsp;&nbsp;&nbsp;
+                    <span>内容</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group my-flex mt-2" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">支持</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">反对</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">投诉建议</button>
+        </div>
+    </div>
+</div>
+
+
+{{/block}}
+
+{{block 'script'}}
+<!-- <script src="/public/js/home.js"></script> -->
+{{/block}}

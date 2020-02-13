@@ -1,0 +1,85 @@
+{{extend './_layouts/base.html'}}
+
+{{block 'title'}}{{'Content/Circle'}}{{/block}}
+
+{{block 'middle'}}
+<div class="col-md-7 my-border">
+    <!--头部-->
+    <div class="mt-4">
+        <h3>
+            <strong>内容</strong>
+            <button type="button" class="button button-glow button-border button-rounded button-primary ml-5" data-toggle="modal" data-target="#myModal">参与内容</button>
+        </h3>
+        <hr />
+        <div class="my-nav">
+            <ul>
+                <li><a href="" class="now">最新</a></li>
+                <li><a href="">最热</a></li>
+                <li><a href="">我的</a></li>
+            </ul>
+        </div>
+        <hr />
+    </div>
+    <!--内容-->
+    <div class="content">
+        {{ each data}}
+        <div class="mt-4">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="/public/img/authlogo.jpg" class="rounded-circle img-mini">
+                </div>
+
+                <div class="col-md-11">
+                    <div class="my-name">
+                        &nbsp;&nbsp;&nbsp;
+                        <span><strong>{{$value.nickname}}</strong></span>
+                    </div>
+                    <div class="topic-content">
+                        &nbsp;&nbsp;&nbsp;
+                        <span>{{$value.content}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group my-flex mt-2" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary my-flex-child button-blue">收藏</button>
+                <button type="button" class="btn btn-secondary my-flex-child button-blue">评论</button>
+                <button type="button" class="btn btn-secondary my-flex-child button-blue">私信</button>
+                <button type="button" class="btn btn-secondary my-flex-child button-blue">点赞</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    
+</div>
+<!-- 模态框 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">参与内容</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">内容:</label>
+                    <textarea class="form-control" id="content"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="sub">提交</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{/block}}
+
+{{block 'script'}}
+<script src="/public/js/content.js"></script>
+{{/block}}

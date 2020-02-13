@@ -1,0 +1,70 @@
+{{extend './_layouts/base.html'}}
+
+{{block 'title'}}{{'Notice/Circle'}}{{/block}}
+
+{{block 'middle'}}
+<div class="col-md-7 my-border">
+    <!--头部-->
+    <div class="mt-4">
+        <h3><strong>通知</strong></h3>
+        <hr />
+    </div>
+    <!--内容-->
+    <div class="topic">
+        <div class="row">
+            <div class="col-md-1">
+                <img src="/public/img/authlogo.jpg" class="rounded-circle img-mini">
+            </div>
+
+            <div class="col-md-11">
+                <div class="my-name">
+                    &nbsp;&nbsp;&nbsp;
+                    <span><strong>名字</strong></span>
+                </div>
+                <div class="topic-content">
+                    &nbsp;&nbsp;&nbsp;
+                    <span>内容</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group my-flex mt-2" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">收藏</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">评论</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">私信</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">点赞</button>
+        </div>
+    </div>
+
+
+    <div class="topic mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-1">
+                <img src="/public/img/authlogo.jpg" class="rounded-circle img-mini">
+            </div>
+
+            <div class="col-md-11">
+                <div class="my-name">
+                    &nbsp;&nbsp;&nbsp;
+                    <span><strong>名字</strong></span>
+                </div>
+                <div class="topic-content">
+                    &nbsp;&nbsp;&nbsp;
+                    <span>内容</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group my-flex mt-2" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">收藏</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">评论</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">私信</button>
+            <button type="button" class="btn btn-secondary my-flex-child button-blue">点赞</button>
+        </div>
+    </div>
+</div>
+
+
+{{/block}}
+
+{{block 'script'}}
+<!-- <script src="/public/js/home.js"></script> -->
+{{/block}}

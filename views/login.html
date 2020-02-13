@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/base.min.css">
+    <link rel="stylesheet" href="/public/css/auth.css">
+    <title>Login/Circle</title>
+</head>
+
+<body>
+    <div class="authpage">
+        <div class="container">
+            <form action="/auth/login/user" method="POST">
+                <div class="auth-main auth-row auth-col-one">
+                    <div class="auth-top auth-row">
+                        <a class="boardtop-left" href="/">
+                            <div>首 页</div>
+                        </a>
+                        <div class="auth-logo">
+                            <img src="/public/img/authlogo.jpg" alt="">
+                        </div>
+                        <a href="/auth/register" class="boardtop-right">
+                            <div>注 册</div>
+                        </a>
+                    </div>
+                    <div class="btn-auth auth-row">
+                        <button id="visitor" type="button" class="btn btn-block btn-brand waves-attach waves-light">
+                            游客访问
+                        </button>
+                    </div>
+                    <div class="auth-row">
+                        <div class="form-group-label auth-row row-login">
+                            <label class="floating-label" for="email">昵称</label>
+                            <input class="form-control maxwidth-auth" id="email" type="text" name="nickname">
+                        </div>
+                    </div>
+                    <div class="auth-row">
+                        <div class="form-group-label auth-row row-login">
+                            <label class="floating-label" for="passwd">密码</label>
+                            <input class="form-control maxwidth-auth" id="passwd" type="password" name="passwd">
+                        </div>
+                    </div>
+                    <div class="btn-auth auth-row">
+                        <button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light">
+                            确认登录
+                        </button>
+                    </div>
+                    <div class="auth-help auth-row">
+                        <div class="auth-help-table auth-row">
+                            <div class="checkbox checkbox-adv">
+                                <label for="remember_me">
+                                    <input class="access-hide" value="week" id="remember_me" name="remember_me"
+                                        type="checkbox">记住我
+                                    <span class="checkbox-circle"></span><span
+                                        class="checkbox-circle-check"></span><span
+                                        class="checkbox-circle-icon icon">done</span>
+                                </label>
+                            </div>
+                            <a href="/password/reset">忘记密码？</a>
+                        </div>
+                    </div>
+                    <div class="auth-bottom auth-row">
+                        <div class="tgauth">
+                            <button class="btn" style="cursor:unset;"></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/public/js/jquery-3.4.1.min.js"></script>
+<script src="/public/js/login.js"></script>
+<script src="/public/js/cookie.js"></script>
+</html>

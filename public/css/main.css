@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.navbar-form input, .form-inline input {
+  width: auto;
+}
+
+header {
+  height: 270px;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top: 25px;
+    width: 228px;
+  }
+  #sidebar.affix {
+    position: fixed;
+    top: 25px;
+    width: 228px;
+  }
+}
+
+.affix, .affix-top {
+  position: static;
+}
+
+/* bootstrap 3 helpers */
+
+/* @media (min-height: 1200px) {
+  .container{
+      max-height: 100%;
+  }
+} */
+
+.container {
+  height: 1000px;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* 指正常的未被访问过的链接*/
+
+a:visited {
+  text-decoration: none;
+}
+
+/*指已经访问过的链接*/
+
+a:hover {
+  text-decoration: none;
+  color: #1DA1F2;
+}
+
+/*指鼠标在链接*/
+
+a:active {
+  text-decoration: none;
+}
+
+/* 指正在点的链接*/
+
+.text-white {
+  color: black!important;
+}
+
+.bg-primary {
+  background-color: #F5F8FA!important;
+}
+
+/* 左边栏边距 */
+
+.list-group-item {
+  padding: 0.9rem 1.25rem;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.color-blue {
+  color: #1DA1F2;
+}
+
+.button-blue {
+  /* background-color: #008AFF; */
+  background-color: #FFF;
+  color: #008AFF;
+  border-color: #FFF;
+}
+
+/* 图片 */
+
+.img-mini {
+  width: 50px;
+  height: 50px;
+}
+.img-mini-trash {
+  width: 30px;
+  height: 30px;
+}
+
+
+.img-logo {
+  width: 75px;
+  height: 75px;
+}
+
+/* 边框 */
+
+.my-border {
+  border: 2px solid #F6F8F9;
+}
+
+/*搜索框*/
+
+.search_input input[type='text'] {
+  display: inline-block;
+  width: 250px;
+  border-radius: 15px;
+  height: 30px;
+  text-indent: 30px;
+  border: 1px solid;
+}
+
+.search_input input[type='text']:focus {
+  border: 0px;
+  border-color: white;
+  /* width: 200px; */
+}
+
+.search_input {
+  margin-top: 10px;
+}
+
+.search_input i {
+  position: relative;
+  left: 10px;
+  top: 25px;
+}
+
+/* 导航栏 */
+
+.now {
+  background: #008AFF;
+}
+
+.my-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.my-nav ul li {
+  flex: 1;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.my-nav ul li .now {
+  color: #FFF;
+}
+
+.my-nav ul li a {
+  text-decoration: none;
+  color: #303133;
+  padding: 5px 10px;
+  display: block;
+}
+
+/*鼠标放上去的样式 */
+
+.my-nav ul li a:hover {
+  background: #008AFF;
+  color: #FFF;
+}
+
+.my-flex {
+  display: flex;
+}
+
+.my-flex-child {
+  flex: 1;
+}
+.center {
+  position:absolute;
+  top:auto;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.three {
+  padding: 0 35px !important;
+}
+
+.my-font{
+  font-size: 26px;
+}
+
+.my-nav2 ul {
+  list-style: none;
+  display: flex;
+}
+
+.my-nav2 ul li:first-child {
+  flex: 1;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+}
+.my-nav2 ul li {
+  flex: 2;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+}
